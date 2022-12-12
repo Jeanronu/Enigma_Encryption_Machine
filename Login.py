@@ -42,7 +42,7 @@ def login():
                         admin_pass = input("Insert your password \n")
                         if admin_pass == "124582":
                             print("\nHere is the original data of the users: \n")
-                            print("-------------------------------------------------------------------------------------\n")
+                            print("---------------------------------------------------------------------------------\n")
                             with open(csv_file2) as p:  # open de file to work with it
                                 reader2 = csv.DictReader(p)  # convert each row of the csv in a dictionary
 
@@ -79,9 +79,9 @@ def login():
 
                                     for encrypted in encrypt_list:
                                         if encrypted['ID'] == usernames['ID']:
-                                            newdict = {key: value for (key, value) in encrypted.items() if key != "ID"}
+                                            new_dict = {key: value for (key, value) in encrypted.items() if key != "ID"}
                                             print("This is your info encrypted:\n")
-                                            for item, thing in newdict.items():
+                                            for item, thing in new_dict.items():
                                                 print(item, ":", thing)
                                     print("\nThank you for use our service, See You Next Time!!!")
                                     exit()
