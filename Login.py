@@ -14,7 +14,7 @@ def login():
         if login_ui.upper() == "N":
             print("let's Create an Account! <3 "
                   "\n----------------------------------------------------------------------\n")
-            from User_Interface import insert_info
+            from User_Interface import insert_info  # Import the user interface to create a new user
             print("\nYour Account Is Ready!!! Log In to See your Info Encrypted :3\n")
             exit()
         else:
@@ -36,7 +36,7 @@ def login():
             this_user = []
             tries = 3
             for usernames in list_users:
-                if user == "Admin01":
+                if user == "Admin01":  # specific account that have access to the original data
                     print("You are trying to log in to the Admin profile")
                     while tries != 0:
                         admin_pass = input("Insert your password \n")
@@ -48,7 +48,7 @@ def login():
 
                                 """Put the data in a list"""
                                 for row in reader2:
-                                    print(row)
+                                    print(row)  # print each user information in a new line
                             exit()
                         else:
                             print("Sorry the password is incorrect")
@@ -79,21 +79,21 @@ def login():
 
                                     for encrypted in encrypt_list:
                                         if encrypted['ID'] == usernames['ID']:
-                                            new_dict = {key: value for (key, value) in encrypted.items() if key != "ID"}
+                                            new_dict = {key: value for (key, value) in encrypted.items() if key != "ID"}  # print everything less the ID
                                             print("This is your info encrypted:\n")
-                                            for item, thing in new_dict.items():
+                                            for item, thing in new_dict.items():  # make that each item be printed in a new line to make it see more organize
                                                 print(item, ":", thing)
                                     print("\nThank you for use our service, See You Next Time!!!")
-                                    exit()
+                                    exit()  # finish the code
 
                             else:
                                 print("Sorry the password is incorrect")
-                                tries -= 1
+                                tries -= 1  # let you try the password 3 times
                         if tries == 0:
                             print("You overpass your limit of tries!!! Byeeeeee")
-                            exit()
+                            exit()  # close the code when the tries get to their limit
             else:
-                print("Sorry this user doesn't exist\n")
+                print("Sorry this user doesn't exist\n")  # if the user doesn't exist is going to ask again for it
 
 
 login()
