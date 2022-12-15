@@ -1,6 +1,9 @@
 """"
 Go to login file!!! this file 
 This file is the user interface!
+
+The first 4 users on the cvs files, are encrypted with a plugboard setting of ("AB" "CD" "EF") that is different of the 
+ones after the #5 that have a plugboard of ("AX" "EF" "JR")
 """""
 import csv
 
