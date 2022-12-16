@@ -137,7 +137,7 @@ def data_input() -> dict:
         if len(data) > 0:
             file_object.write("\n")
         # Append text at the end of file
-        Id = str(Id) + ", "
+        Id = str(Id) + ","
         file_object.write(Id)  # write the id to identify the user
         already_in = [Id]  # a list that make sure does not have repeat things
         to_encrypt = [name.upper(), last_name.upper(), direction.upper(), password.upper()]  # things to encrypt
@@ -149,7 +149,7 @@ def data_input() -> dict:
                 else:
                     cipher_text = cipher_text + letter  # keep the spaces and symbols
             if item != password.upper():  # for every string add a space and "," to separate them
-                cipher_text = cipher_text + ", "
+                cipher_text = cipher_text + ","
             if cipher_text not in already_in:
                 file_object.write(cipher_text)  # add the string to the file
                 already_in.append(cipher_text)

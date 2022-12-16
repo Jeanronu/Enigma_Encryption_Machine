@@ -54,7 +54,7 @@ def login():
                             print("Sorry the password is incorrect")
                             tries -= 1
                         if tries == 0:
-                            print("You overpass your limit of tries!!! Byeeeeee")
+                            print("You are not an Admin!!! Byeeeeee")
                             exit()
                 else:
                     if usernames['User-Name'] == user:
