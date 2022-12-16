@@ -101,6 +101,7 @@ def data_input() -> dict:
         if username == "":
             print("Sorry you have to enter your name")
 
+    # check if the username is already used by someone else
     exist = "a"
     with open("Data-information.csv") as f:
         reader = csv.reader(f, delimiter=',', skipinitialspace=True)
